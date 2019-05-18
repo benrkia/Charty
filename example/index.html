@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Benrkia's Chart.js</title>
+</head>
+<body>
+
+    <svg id="myChart" width="400" height="400"></svg>
+
+    <script src="../charty.js"></script>
+
+    <script>
+        let svg = document.querySelector('#myChart');
+
+        const data = {
+            labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+            dataset: {
+                label: '#Color Votes',
+                data: [21, -35, 2, -7, 12, 53],
+                backgroundColor: 'rgba(41, 128, 185,0.2)',
+                borderColor: 'rgba(41, 128, 185,1)',
+                borderWidth: 1,
+            }
+        };
+
+        const charty = new Charty(svg, data);
+
+    </script>
+</body>
+</html>
